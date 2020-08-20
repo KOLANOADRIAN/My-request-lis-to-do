@@ -4,6 +4,7 @@
     background-color: white;
     padding-bottom: 30px;
     box-shadow: 0 0 5px #ddd;
+   
 }
 
 .container__sectionCaption {
@@ -34,23 +35,39 @@
     border: none;
     color: white;
     background-color: rgb(12, 117, 56);
-    padding: 10px 15px;
+    width: 30px;
+    height: 30px ;
+   
+   
+    
+}
+
+.tasks__buttonToggle--done {
+    
+    
+
 }
 .tasks__buttonToggle:hover {
-
     background-color: rgb(55, 145, 92);
     border: none;
+    
 }
 .tasks__buttonToggle:active {
     background-color: rgba(50, 117, 78, 0.884);
     border: none;
 }
 
+.tasks__content--done {
+    text-decoration: line-through;
+}
+
+
 .tasks__buttonRemove {
     border: none;
     color: white;
     background-color: rgb(202, 51, 23);
-    padding: 10px 15px;
+    width: 30px;
+    height: 30px ;
 
 }
 
