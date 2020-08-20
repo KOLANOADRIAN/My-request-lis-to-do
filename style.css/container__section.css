@@ -2,5 +2,64 @@
     width: 100%;
     height: auto;
     background-color: white;
+    padding-bottom: 30px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.container__sectionCaption {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ccc;
+}
+
+.container__sectionList {
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style: none;
+  
+}
+
+.container__sectionListIteam {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
     margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px ;
+  
+}
+
+.tasks__buttonToggle {
+    border: none;
+    color: white;
+    background-color: rgb(12, 117, 56);
+    padding: 10px 15px;
+}
+.tasks__buttonToggle:hover {
+
+    background-color: rgb(55, 145, 92);
+    border: none;
+}
+.tasks__buttonToggle:active {
+    background-color: rgba(50, 117, 78, 0.884);
+    border: none;
+}
+
+.tasks__buttonRemove {
+    border: none;
+    color: white;
+    background-color: rgb(202, 51, 23);
+    padding: 10px 15px;
+
+}
+
+.tasks__buttonRemove:hover {
+    background-color: rgb(190, 68, 70);
+    border: none;
+    
+}
+.tasks__buttonRemove:active {
+    background-color: rgb(221, 109, 109);
+    border: none;
 }

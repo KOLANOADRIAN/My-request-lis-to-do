@@ -3,4 +3,43 @@
     height: auto;
     background-color: white;
     margin: 10px 0;
+    box-shadow: 0 0 5px #ddd;
 }
+.container__headerCaption {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ccc;
+
+}
+
+.container__headerForm {
+    padding: 0 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px ;
+  
+}
+@media (max-width: 767px) {
+    .container__headerForm {
+       grid-template-columns: 1fr;
+      
+    }
+}
+.container__headerInput {
+    padding: 10px;
+    
+}
+
+.container__headerButton {
+    border: none;
+    background-color: teal;
+    padding: 10px;
+    color: white;
+
+}
+.container__headerButton:hover {
+    background-color: rgb(21, 161, 161);
+}
+
+
