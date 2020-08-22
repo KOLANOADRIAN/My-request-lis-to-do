@@ -28,6 +28,7 @@
     background-color: rgb(12, 117, 56);
     width: 30px;
     height: 30px;
+    transition: 1s;
 }
 
 
@@ -51,10 +52,11 @@
     background-color: rgb(202, 51, 23);
     width: 30px;
     height: 30px;
+    transition: 1s;
 }
 
 .tasks__buttonRemove:hover {
-    background-color: rgb(190, 68, 70);
+    background-color: rgb(182, 89, 91);
     
 }
 
