@@ -5,31 +5,57 @@
 
    const container__headerInput = document.querySelector(".container__input")
 
-   const tasks = [];
+   let tasks = [];
+   let hideDoneTasks = false;
 
    const addNewTask = (newTaskContent) => {
-      tasks.push({
-         content: newTaskContent,
-      });
+      tasks = [...tasks, { content: newTaskContent }];
+      // tasks.push({
+      //    content: newTaskContent,
+      // });
       render();
    };
 
    const removeTask = (index) => {
-      tasks.splice(index, 1);
+      tasks = [
+         ...tasks.slice(0, index),
+         ...tasks.slice(index + 1),
+      ];
+      // tasks.splice(index, 1);
       render();
    };
    const toggleTaskDone = (index) => {
-      tasks[index].done = !tasks[index].done;
+      tasks = [
+         ...tasks.slice(0, index),
+         {
+            ...tasks[index],
+            done: !tasks[index].done,
+         },
+         ...tasks.slice(index + 1),
+      ];
+      // tasks[index].done = !tasks[index].done;
+      render();
+   };
+   const markAllTasksDone = () => {
+      tasks = tasks.map((task) => ({
+         ...task,
+         done: true,
+      }));
+      render();
+   };
+   const toggleHideDoneTasks = () => {
+      hideDoneTasks = !hideDoneTasks;
       render();
    }
    const resetForm = () => {
       document.querySelector(".js-form").reset();
    };
-   
-   const render = () => {
-      let htmlString = "";
-      for (const task of tasks) {
-         htmlString += `<li class="container__listIteam js-task" >
+   const renderTasks = () => {
+      // let htmlString = "";
+      // for (const task of tasks) {
+      //    htmlString += 
+      const taskToHTML = task =>
+         `<li class="container__listIteam${task.done && hideDoneTasks ? "tasks__item--hidden" : ""} js-task" >
                <button class="tasks__buttonToggle tasks__buttonToggle--done js-toggleDone">
                ${task.done ? " ✔ " : ""}
                </button>
@@ -40,11 +66,41 @@
                </button>
             </li>
             `;
-      };
-      document.querySelector(".js-tasks").innerHTML = htmlString;
+      const tasksElement = document.querySelector(".js-tasks");
+      tasksElement.innerHTML = tasks.map(taskToHTML).join("");
+      // document.querySelector(".js-tasks").innerHTML = htmlString;
+   };
+
+   const renderButtons = () => { 
+      // const buttonsElement = document.querySelector(".js-buttons");
+
+      // if (!tasks.length) {
+      //    buttonsElement.innerHTML = "";
+      //    return;
+      // };
+
+      // buttonsElement.innerHTML = `
+      // <button class="buttons__button js-toggleHideDoneTasks">
+      //    ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+      // </button>
+      // <button
+      // ${tasks.every(({done}) => done) ? "disabled" : ""}
+      // >
+      // Ukończone wszystkie
+      // </button>
+      // `;
+   };
+
+   const bindButtonsEvents = () => {
+      // if jakiś przycisk pokasz jakiś przycisk
+   };
+
+   const render = () => {
+      renderTasks();
+      renderButtons();
       bindEvents();
       bindToggleDoneEvents();
-
+      bindButtonsEvents();
    };
 
 
@@ -86,4 +142,5 @@
       form.addEventListener("submit", onFormSubmit);
    };
    init();
+
 };
