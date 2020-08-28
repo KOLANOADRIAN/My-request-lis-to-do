@@ -18,7 +18,7 @@
     padding-bottom: 20px;
     border-bottom: solid 1px #ccc;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr auto;
 }
 .container__listIteam {
     display: grid;

@@ -72,27 +72,27 @@
    };
 
    const renderButtons = () => { 
-      // const buttonsElement = document.querySelector(".js-buttons");
+      const buttonsElement = document.querySelector(".js-bottom__buttons");
 
-      // if (!tasks.length) {
-      //    buttonsElement.innerHTML = "";
-      //    return;
-      // };
+      if (!tasks.length) {
+         buttonsElement.innerHTML = "";
+         return;
+      };
 
-      // buttonsElement.innerHTML = `
-      // <button class="buttons__button js-toggleHideDoneTasks">
-      //    ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
-      // </button>
-      // <button
-      // ${tasks.every(({done}) => done) ? "disabled" : ""}
-      // >
-      // Ukończone wszystkie
-      // </button>
-      // `;
+      buttonsElement.innerHTML = `
+      <button class="buttons__button js-toggleHideDoneTasks">
+         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+      </button>
+      <button
+      ${tasks.every(({done}) => done) ? "disabled" : ""}
+      >
+      Ukończone wszystkie
+      </button>
+      `;
    };
 
    const bindButtonsEvents = () => {
-      // if jakiś przycisk pokasz jakiś przycisk
+      // if 
    };
 
    const render = () => {
