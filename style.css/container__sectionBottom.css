@@ -28,7 +28,9 @@
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 }
-
+.tasks__item--hidden {
+    display: none;
+}
 .tasks__buttonToggle {
     border: none;
     color: white;

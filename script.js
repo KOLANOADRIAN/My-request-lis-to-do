@@ -43,6 +43,9 @@
       }));
       render();
    };
+   // const hideDoneTasks = document.querySelector(".tasks__item--hidden")
+   //    hideDoneTasks.addEventListener("click", () => )
+
    const toggleHideDoneTasks = () => {
       hideDoneTasks = !hideDoneTasks;
       render();
@@ -55,7 +58,7 @@
       // for (const task of tasks) {
       //    htmlString += 
       const taskToHTML = task =>
-         `<li class="container__listIteam${task.done && hideDoneTasks ? "tasks__item--hidden" : ""} js-task" >
+         `<li class="container__listIteam ${task.done && hideDoneTasks ? "tasks__item--hidden" : ""} js-task" >
                <button class="tasks__buttonToggle tasks__buttonToggle--done js-toggleDone">
                ${task.done ? " ✔ " : ""}
                </button>
@@ -66,12 +69,13 @@
                </button>
             </li>
             `;
+      
       const tasksElement = document.querySelector(".js-tasks");
       tasksElement.innerHTML = tasks.map(taskToHTML).join("");
       // document.querySelector(".js-tasks").innerHTML = htmlString;
    };
 
-   const renderButtons = () => { 
+   const renderButtons = () => {
       const buttonsElement = document.querySelector(".js-bottom__buttons");
 
       if (!tasks.length) {
@@ -84,7 +88,8 @@
          ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
       </button>
       <button
-      ${tasks.every(({done}) => done) ? "disabled" : ""}
+         class="buttons__button js-markAllDone"
+      ${tasks.every(({ done }) => done) ? "disabled" : ""}
       >
       Ukończone wszystkie
       </button>
@@ -92,7 +97,15 @@
    };
 
    const bindButtonsEvents = () => {
-      // if 
+      const markAllDoneButton = document.querySelector(".js-markAllDone")
+      if (markAllDoneButton) {
+      markAllDoneButton.addEventListener("click", markAllTasksDone);
+      };
+
+      const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
+      if (toggleHideDoneTasksButton) {
+         toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+      };
    };
 
    const render = () => {
