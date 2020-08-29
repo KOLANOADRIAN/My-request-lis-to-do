@@ -20,6 +20,19 @@
     display: grid;
     grid-template-columns: 1fr auto;
 }
+
+.buttons__button {
+    background: none;
+    border: none;
+    color: teal;
+    font-size: 20px;
+    
+}
+
+
+.buttons__button:hover {
+    color: rgb(66, 117, 117);
+}
 .container__listIteam {
     display: grid;
     grid-template-columns: auto 1fr auto;

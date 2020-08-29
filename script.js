@@ -69,7 +69,6 @@
                </button>
             </li>
             `;
-      
       const tasksElement = document.querySelector(".js-tasks");
       tasksElement.innerHTML = tasks.map(taskToHTML).join("");
       // document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -82,7 +81,6 @@
          buttonsElement.innerHTML = "";
          return;
       };
-
       buttonsElement.innerHTML = `
       <button class="buttons__button js-toggleHideDoneTasks">
          ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
