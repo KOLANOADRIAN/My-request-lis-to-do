@@ -6,12 +6,12 @@
     box-shadow: 0 0 5px #ddd;
 }
 
-
 .container__list {
     margin-left: 20px;
     margin-right: 20px;
     list-style: none;
 }
+
 .bottom__header {
     padding-left: 20px;
     padding-top: 20px;
@@ -20,70 +20,76 @@
     display: grid;
     grid-template-columns: 1fr auto;
 }
+@media (max-width: 767px) {
+    .bottom__header {
+        grid-template-columns: 1fr;
+    }
+}
+.container__caption--bottom {
+  
+}
+@media (max-width: 767px) {
+    .container__caption--bottom {
+       text-align: center;
+    }
+}
 
 .buttons__button {
     background: none;
     border: none;
     color: teal;
     font-size: 20px;
-    
 }
 
-
-.buttons__button:hover {
-    color: rgb(66, 117, 117);
-}
-.container__listIteam {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    margin: 10px 0;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-.tasks__item--hidden {
-    display: none;
-}
-.tasks__buttonToggle {
-    border: none;
-    color: white;
-    background-color: rgb(12, 117, 56);
-    width: 30px;
-    height: 30px;
-    transition: 1s;
-}
-
-
-.tasks__buttonToggle:hover {
-    background-color: rgb(55, 145, 92);
-   
-}
-
-.tasks__buttonToggle:active {
-    background-color: rgba(50, 117, 78, 0.884);
-   
-}
-
-.tasks__content--done {
-    text-decoration: line-through;
-}
-
-.tasks__buttonRemove {
-    border: none;
-    color: white;
-    background-color: rgb(202, 51, 23);
-    width: 30px;
-    height: 30px;
-    transition: 1s;
-}
-
-.tasks__buttonRemove:hover {
-    background-color: rgb(182, 89, 91);
-   
-    
-}
-
-.tasks__buttonRemove:active {
-    background-color: rgb(221, 109, 109);
-    
-}
+@media (max-width: 767px) {
+    .buttons__button {
+        width: 100%;
+     
+          
+        }
+    }
+    .buttons__button:hover {
+        color: rgb(66, 117, 117);
+    }
+    .container__listIteam {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-gap: 10px;
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+    }
+    .tasks__item--hidden {
+        display: none;
+    }
+    .tasks__buttonToggle {
+        border: none;
+        color: white;
+        background-color: rgb(12, 117, 56);
+        width: 30px;
+        height: 30px;
+        transition: 1s;
+    }
+    .tasks__buttonToggle:hover {
+        background-color: rgb(55, 145, 92);
+    }
+    .tasks__buttonToggle:active {
+        background-color: rgba(50, 117, 78, 0.884);
+    }
+    .tasks__content--done {
+        text-decoration: line-through;
+    }
+    .tasks__buttonRemove {
+        border: none;
+        color: white;
+        background-color: rgb(202, 51, 23);
+        width: 30px;
+        height: 30px;
+        transition: 1s;
+    }
+    .tasks__buttonRemove:hover {
+        background-color: rgb(182, 89, 91);
+    }
+    .tasks__buttonRemove:active {
+        background-color: rgb(221, 109, 109);
+    }

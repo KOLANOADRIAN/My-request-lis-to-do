@@ -89,7 +89,7 @@
          class="buttons__button js-markAllDone"
       ${tasks.every(({ done }) => done) ? "disabled" : ""}
       >
-      Ukończone wszystkie
+      Ukończ wszystkie
       </button>
       `;
    };

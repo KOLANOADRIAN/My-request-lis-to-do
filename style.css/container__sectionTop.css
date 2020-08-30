@@ -42,3 +42,8 @@
     background-color: rgb(21, 161, 161);
     transform: scale(1.2);
 }
+@media (max-width: 767px) {
+    
+.container__button:hover {
+    transform: scale(1.05);
+}
